@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Projects</title>
+  <link rel="stylesheet" href="style.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+  <audio autoplay loop volume="0.5"> 
+    <source src="perfect-beauty-191271.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <video class="background-video" autoplay muted loop>
+    <source src="Video\103434-662525884.mp4" type="video/mp4"> 
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="sidebar">
+    <a href="Portifolio.html">Home</a>
+    <a href="Profile.html">Profile</a>
+    <a href="Skills.html">Skills</a>
+    <a href="Projects.html">Projects</a> 
+    <a href="Contact.html">Contact</a> 
+  </div>
+
+  <div class="main-content">
+    <div class="section-box">
+      <h2>My Projects</h2>
+
+      <h3>Catstanbul</h3>
+      <p>A website i made for the jupiter giveaway, which end on jan 27th 2025</p>
+      <a href="" target="_blank">View Project 1</a>
+
+      <h3>Scripts</h3>
+      <p>Some scripts for some stories</p>
+      <a href="https://drive.google.com/drive/folders/1BRHPLBtNjEIfIZN4ZY3BsYTgd-BeCzeo?usp=drive_link" target="_blank">View Project 2</a>
+
+      <h3><strong>The lack of confidence</strong></h3>
+      <p>These are the links to the repositories that contain them</p>
+      <a href=https://drive.google.com/drive/folders/1BRHPLBtNjEIfIZN4ZY3BsYTgd-BeCzeo?usp=drive_link"" target="_blank">View Project 3</a>
+
+      <h3><strong>Roblox anti-cheats</strong></h3>
+      <p>A study speaking on the effects of mental health on different age groups</p>
+      <a href="https://github.com/KeihatsuZero0/Roblox-anti-cheat" target="_blank">View Project 4</a>
+
+      <h3><strong>Short study on mental health and different age groups</strong></h3>
+      <p>A study speaking on the effects of mental health on different age groups</p>
+      <a href="https://drive.google.com/drive/folders/1BRHPLBtNjEIfIZN4ZY3BsYTgd-BeCzeo?usp=drive_link" target="_blank">View Project 5</a>
+
+      <h3><strong>Some short stories</strong></h3>
+      <p>A study speaking on the effects of mental health on different age groups</p>
+      <a href="https://drive.google.com/drive/folders/1BRHPLBtNjEIfIZN4ZY3BsYTgd-BeCzeo?usp=drive_link" target="_blank">View Project 6</a>
+
+      <h3><strong>The study help website</strong></h3>
+      <p>a website that provides the materials to aid reading and studying</p>
+      <a href="" target="_blank">View Project 7</a>
+
+      <h3><strong>Blockchain scripts</strong></h3>
+      <p>a website that provides the materials to aid reading and studying</p>
+      <a href="https://github.com/KeihatsuZero0/Blockchain-scripts/tree/87b218d589189369cfbb5b956aee5be1ee5f3ba1" target="_blank">View Project 8</a>
+
+
+
+    </div>
+
+    <h2>Simple Chatbot, can only reply to hi, how are you doing?, tell me a joke, tell me the time</h2>
+    <div id="chatbox">
+      <p><strong>You:</strong></p>
+      <input type="text" id="userInput" placeholder="Type your message here...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+      function sendMessage() {
+        var userInput = document.getElementById("userInput").value;
+        var chatbox = document.getElementById("chatbox");
+
+        // Display user's message
+        chatbox.innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
+
+        // Simulate a bot response (improved logic)
+        var botResponse = "";
+
+        if (userInput.toLowerCase().includes("hello, hey there, hey, hi") || userInput.toLowerCase().includes("hi")) {
+          botResponse = "Hello! How are you?, i can only answer short and simple stuff";
+        } else if (userInput.toLowerCase().includes("how are you, how u doing, how are you doing")) {
+          botResponse = "I'm doing well, thank you!";
+        } else if (userInput.toLowerCase().includes("what is your name")) {
+          botResponse = "I'm a simple chatbot."; 
+        } else if (userInput.toLowerCase().includes("bye") || userInput.toLowerCase().includes("goodbye")) {
+          botResponse = "Goodbye!"; 
+        } else if (userInput.toLowerCase().includes("thank you") || userInput.toLowerCase().includes("thanks")) {
+          botResponse = "You're welcome!";
+        } else if (userInput.toLowerCase().includes("what time is it")) {
+          // Get current time 
+          var today = new Date();
+          var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+          botResponse = "The current time is " + time; 
+        } else if (userInput.toLowerCase().includes("tell me a joke")) {
+          botResponse = "Why don't scientists trust atoms? Because they make up everything!";
+        } else {
+          botResponse = "I'm still learning. Try asking me a simple question.";
+        }
+
+        // Display bot's response
+        chatbox.innerHTML += "<p><strong>Bot:</strong> " + botResponse + "</p>";
+
+        // Clear input field
+        document.getElementById("userInput").value = "";
+      }
+    </script>
+  </div>
+
+</body>
+</html>
+
+     
